@@ -41,10 +41,11 @@ body{
     font-size: 1rem;
     color: #FFFFFF;
     font-weight: 400;
+    line-height: 24px;
 
 }
 
-.text-titel{
+.text-title{
     font-size: 3rem;
     font-weight: 700;
     color: #FFFFFF;
@@ -168,7 +169,7 @@ header>nav>.logo>h1>span{
     text-align: center;
 }
 
-.about>.about-contant>p{
+.about>.about-content>p{
     line-height: 20px;
     margin-top: 16px;
     margin-bottom: 80px;
@@ -191,6 +192,77 @@ header>nav>.logo>h1>span{
    margin-bottom: 16px;
 
 }
+
+/* choose */
+
+.choose{
+    background-color: #230E3D;
+     
+}
+
+
+.choose>.choose-title{
+    padding-top: 120px;
+    text-align: center; 
+}
+
+.choose>.choose-card{
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+.choose-card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16;
+    padding: 40px;
+    border-radius: 40px;
+    background: rgba(53, 17, 101, 0.4);
+
+}
+
+
+
+.choose-card-item>h6{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 21px;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+.choose>.choose-card>.choose-card-item-1{
+    grid-row: span 2;
+    
+    
+}
+
+.choose>.choose-card>.choose-card-item-2{
+    grid-column: span 2;
+    
+}
+
+.choose>.choose-card>.choose-card-item-3{
+    grid-column: span 2;
+    
+}
+
+.choose>.choose-card>.choose-card-item-4{
+    grid-column: span 2;
+    
+}
+
+
+
+
 
 
 
@@ -217,7 +289,7 @@ header>nav>.logo>h1>span{
 
     /* about  */
 
-    .about>.about-contant{
+    .about>.about-content{
     max-width: 430px;
     }
 
@@ -228,5 +300,35 @@ header>nav>.logo>h1>span{
 
     }
 
+
+
+    /* .choose */
+
+    .choose>.choose-card{
+    max-width: 430px;
+    grid-template-columns: repeat(1,1fr);
+    }
+
+    
+.choose>.choose-card>.choose-card-item-1{
+    grid-row: span 1;
+    
+    
+}
+
+.choose>.choose-card>.choose-card-item-2{
+    grid-column: span 1;
+    
+}
+
+.choose>.choose-card>.choose-card-item-3{
+    grid-column: span 1;
+    
+}
+
+.choose>.choose-card>.choose-card-item-4{
+    grid-column: span 1;
+    
+}
       
 }
