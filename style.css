@@ -42,6 +42,7 @@ body{
     color: #FFFFFF;
     font-weight: 400;
     line-height: 24px;
+    opacity: 60%;
 
 }
 
@@ -317,8 +318,110 @@ header>nav>.logo>h1>span{
     
 }
 
+/* host */
 
 
+.host{
+    background-color: #1A0B2E;
+    padding-bottom: 120px;
+
+}
+
+.host>h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.host-card{
+    background-color: #230E3D;
+    padding: 40px;
+    align-items: center;
+    gap: 24px;
+    border-radius: 24px;
+    
+}
+.host-card>.host-content>h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+
+.host-card>.host-content>p{
+   margin-bottom: 16px;
+   max-width: 900px;
+}
+
+.host-content>.icon{
+    gap: 8px;
+}
+
+.host-content>.icon>.icon-circle{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.host-content>.icon>.icon-circle>.icon-img{
+   
+    display: flex;
+
+}
+
+
+/* footer */
+
+footer{
+    background-image: url('./assets/footer-bg.png');
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px;
+    text-align: center;
+
+}
+footer>.logo{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer>.logo>h1{
+    color: #FFFFFF;
+}
+
+footer>.logo>h1>span{   
+    background-image: var(--Linear);
+    background-clip: text;
+    color: transparent;
+    background-position: center;
+}
+
+footer>.footer-brand-icon>.footer-icon {
+    display: flex;
+    gap: 10px;
+    color: #FFFFFF;
+}
+footer>.footer-brand-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+    /* max-width: 550px; */
+}
+
+/* footer>.footer-brand-icon>.footer-icon>img{
+    width: 100%;
+    
+} */
 
 
 
@@ -397,5 +500,79 @@ header>nav>.logo>h1>span{
   
 }
 
+/* host  */
 
+
+.host-card{
+     max-width: 430px;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.host-content>.icon{
+    justify-content: center;
+}
+
+
+
+/* footer  */
+
+footer{
+    
+    /* width: 100%; */
+    height: 200px;
+    
+    
+   
+
+}
+
+.footer{     
+    background-position: center;     
+    background-size:cover; 
+    padding: 10px; 
+
+}
+
+footer>.logo{
+    font-size: 1rem;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+
+footer>.footer-brand-icon>.footer-icon {
+    display: flex;
+    gap: 0px;
+}
+footer>.footer-brand-icon{
+    display: grid;
+    grid-template-columns: repeat(2,150px);
+    gap: 0px;
+    
+
+    margin-top: 0;
+    /* max-width: 550px; */
+}
+
+footer>p{
+    margin-top: 20px;
+    /* max-width: 550px; */
+}
+
+
+footer>.footer-brand-icon>.footer-icon {
+    display: flex;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+footer>.footer-brand-icon{
+
+    gap: 0px;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* max-width: 550px; */
+}
 }
