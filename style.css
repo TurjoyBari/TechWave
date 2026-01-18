@@ -44,6 +44,12 @@ body{
 
 }
 
+.text-titel{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
 
 
 /* main  */
@@ -55,10 +61,6 @@ header{
     padding: 30px 0px;
     
 }
-
-/* .header-container{
-    display: flex;
-} */
 
 header>nav>.hamburger{
     display: none;
@@ -138,7 +140,6 @@ header>nav>.logo>h1>span{
     font-size: 3.75rem;
     font-weight: 800;
     color: #FFFFFF;
-    margin-bottom: ;
 }
 
 .hero>.hero-content>p{
@@ -159,9 +160,37 @@ header>nav>.logo>h1>span{
 
 }
 
+/* about */
 
 
+.about{
+    background-color: #1A0B2E;
+    text-align: center;
+}
 
+.about>.about-contant>p{
+    line-height: 20px;
+    margin-top: 16px;
+    margin-bottom: 80px;
+}
+.about>hr{
+  opacity: 10%;
+}
+
+.about>.about-card {
+    margin-top: 80px;
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 120px;
+    
+}
+
+.about>.about-card>.card>h1{
+   font-size: 3rem;
+   font-weight: 900;
+   color: #00FF88;
+   margin-bottom: 16px;
+
+}
 
 
 
@@ -180,8 +209,23 @@ header>nav>.logo>h1>span{
     }
     header>.hero{
     width: 100%;
-    background-size: cover; 
     background-position: center;
+    }
+    .hero>.hero-content{
+        max-width: 430px;
+    }
+
+    /* about  */
+
+    .about>.about-contant{
+    max-width: 430px;
+    }
+
+    .about>.about-card{
+        max-width: 430px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+
     }
 
       
