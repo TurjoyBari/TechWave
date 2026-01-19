@@ -54,6 +54,27 @@ body{
 
 
 
+/* animation  */
+
+@keyframes appear {
+        from {
+          opacity: 0;
+          clip-path: inset(100% 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+
+      .block {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+
+
+
 /* main  */
 
 /* navbar */
@@ -61,7 +82,7 @@ body{
 header{
     background-color: var(--color);
     padding: 30px 0px;
-    
+        
 }
 
 header>nav>.hamburger{
@@ -71,6 +92,7 @@ header>nav>.hamburger{
 header>nav{
     justify-content: space-between;
     align-items: center;
+   
 }
 
 .navbar>.menu-list>ul{
@@ -87,6 +109,14 @@ header>nav{
 
 }
 
+.navbar>.menu-list>ul>li>a:hover{
+    
+    background-image: var(--Linear);
+    background-clip: text;
+    color: transparent;
+
+}
+
 header>nav>.logo>h1{
     color: #FFFFFF;
 }
@@ -96,6 +126,8 @@ header>nav>.logo>h1>span{
     background-clip: text;
     color: transparent;
 }
+
+
 
 
 /* hero */
@@ -109,6 +141,8 @@ header>nav>.logo>h1>span{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 .hero>.circle{
@@ -159,8 +193,70 @@ header>nav>.logo>h1>span{
 .hero>.hero-content>.btn-2{
     background:none;
     border: 1px solid #00FF88;
+    background-color: #230E3D;
+    margin-left: 8px;
 
 }
+
+
+
+
+
+
+
+.btn{
+    position: relative;
+    
+}
+
+
+
+    @property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.btn::after , .btn::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index:-1;
+  padding: 2px;
+  border-radius:24px;
+  animation: 3s spin linear infinite;
+}
+.btn::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* about */
 
@@ -318,6 +414,10 @@ header>nav>.logo>h1>span{
     
 }
 
+
+
+
+
 /* host */
 
 
@@ -334,10 +434,13 @@ header>nav>.logo>h1>span{
 
 .host-card{
     background-color: #230E3D;
-    padding: 40px;
+    padding: 37px;
     align-items: center;
     gap: 24px;
     border-radius: 24px;
+    position: relative;
+    z-index: 0;
+    
     
 }
 .host-card>.host-content>h1{
@@ -365,12 +468,79 @@ header>nav>.logo>h1>span{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1A0B2E;
+
 }
 .host-content>.icon>.icon-circle>.icon-img{
    
     display: flex;
 
 }
+
+
+
+
+
+
+
+
+
+.icon-circle{
+    position: relative;
+    
+}
+
+
+
+    @property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.icon-circle::after , .icon-circle::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 2px;
+  border-radius:24px;
+  animation: 3s spin linear infinite;
+}
+.icon-circle::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
