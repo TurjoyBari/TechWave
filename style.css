@@ -148,9 +148,43 @@ header>nav>.logo>h1>span{
 .hero>.circle{
     position: relative;
 }
+
+
+
+
+.pulse{
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    background-color: #ff4545;
+
+}
+.pulse>span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #ff4545;
+    background: transparent;
+    animation: pulse 4s ease-out infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+@keyframes pulse{
+    100%{
+        opacity: 0;
+        transform: scale(1.6);
+
+    }
+}
+
+
 .hero>.circle>.microphone>img{
     position: absolute;
-    top:20%;
+    top:23%;
     left: 33%;
 }
 
@@ -541,8 +575,6 @@ header>nav>.logo>h1>span{
 
 
 
-
-
 /* footer */
 
 footer{
@@ -610,11 +642,42 @@ footer>.footer-brand-icon{
     }
     header>.hero{
     width: 100%;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: px; */
+    height:680px;
+        
+    background-position-y: 130px;
+    /* background-size:cover;  */
     }
-    .hero>.hero-content{
+    .hero>.hero-content {
         max-width: 430px;
     }
+
+    .hero>.circle>img{
+        width: 200px;
+    }
+    .hero>.circle>.microphone>img{
+        width: 70px;
+    }
+    .hero>.circle>.microphone{
+        margin-top: 20px;
+    }
+
+    .hero>.circle>.microphone>span{
+    font-size: .9rem;
+    
+    }
+
+
+    
+    .pulse{
+    
+    width: 200px;
+    height: 200px;
+   
+    }
+
 
     /* about  */
 
