@@ -776,12 +776,21 @@ footer>.logo{
 
 footer>.footer-brand-icon>.footer-icon {
     display: flex;
-    gap: 0px;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    margin-left: 9px;
 }
 footer>.footer-brand-icon{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2,150px);
-    gap: 0px;
+    gap: 0px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    flex-wrap: wrap;
     
 
     margin-top: 0;
